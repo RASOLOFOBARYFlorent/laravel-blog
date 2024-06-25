@@ -1,0 +1,570 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: rgba(10, 35, 51, 0.884);
+    color: #fff;
+}
+
+
+/*common style*/
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+
+/*common style*/
+
+.all{
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-areas: "sidebar maincontent";
+}
+
+
+/* the right side style */
+.sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    position:fixed;
+    height: 100vh;
+}
+.sidebar .top{
+    width: 100%;
+    background-color: #00f;
+    display: flex;
+    gap: 10px;
+    height: 60px;
+    padding: 8px;
+    align-items: center;
+}
+
+.sidebar .top h2{
+    font-size: 20px;
+}
+
+.sidebar .bottom h1{
+    margin-bottom: 15px;
+}
+.sidebar .bottom a{
+    color: #aaa;
+    font-size: 25px;
+}
+.sidebar .bottom ul li img{
+    margin-right: 10px;
+}
+.sidebar .bottom ul{
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+}
+.sidebar .bottom ul li{
+    display: flex;
+    align-items: center;
+
+}
+.sidebar .bottom h1:nth-child(1){
+    margin-top: 20px;
+}
+.sidebar .bottom{
+    height: calc(100vh - 60px);
+    box-shadow: 6px 6px 6px rgb(36, 30, 30);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-left: 10px;
+}
+.sidebar .top img{
+    border-radius: 50%;
+}
+.sidebar img{
+    width: 35px;
+}
+
+.sidebar .hidethen{
+    display: none;
+}
+
+
+
+
+
+/* the right side style */
+
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    grid-area: maincontent;
+    width: calc(100vw - 250px);
+    align-items: center;
+}
+
+.maincontent .navbar{
+    position: fixed;
+    right: 0;
+    left: 250px;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    border-bottom: 2px solid #fff;
+    align-items: center;
+    background: rgba(10, 35, 51, 0.884);
+}
+.maincontent .navbar .left{
+    display: flex;
+    gap: 10px;
+}
+.maincontent .navbar .right{
+    background-color: #aaa;
+    padding-right:10px ;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 3px;
+}
+
+
+ .maincontent .navbar .dropusershow{
+    display:none;
+}
+.maincontent .navbar .dropuserhide{
+    display: flex;
+    background-color: #aaa;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    width: 150px;
+    padding: 20px;
+    right: 0px;
+    text-align: center;
+    box-shadow: 0 5px 5px #000;
+    border-radius: 10px;
+}
+
+.maincontent .navbar .right .dropdown{
+    width: 0;
+    height: 0;
+    border-top: 10px solid #082;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+
+}
+.maincontent .navbar .right img{
+    width: 30px;
+    border-radius: 50%;
+}
+.maincontent .navbar .left a{
+    font-size: 25px;
+    color: #fff;
+}
+.maincontent .navbar .left img{
+    background-color: #fff;
+    filter: hue-rotate(30deg);
+    width: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*payments */
+
+
+
+.allpayments,.allcompany{
+    width: calc(100vw -250px);
+    margin-top: 80px;
+    color: #aaa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 18vw;
+}
+.allpayments  .top,.allcompany .top{
+    display: flex;
+    gap: 14px;
+    align-items: flex-end;
+}
+.allpayments  .top button{
+    font-size: 20px;
+    background-color: #090;
+    color: #ddd;
+    padding: 5px;
+    cursor: pointer;
+}
+.allpayments  form,.allcompany .top form{
+    margin-top: 35px;
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+}
+.allpayments  form input,.allcompany .top form input{
+    height: 35px;
+    padding: 8px;
+    font-size: 20px;
+    background: transparent;
+    color:#aaa;
+    border: 1px solid #aaa;
+}
+
+
+.allpayments  form input[type="submit"],.allcompany .top form input[type="submit"]{
+    height: 35px;
+    padding: 8px;
+    color: #ddd;
+    font-size: 20px;
+    background-color: #029;
+    border: none;
+    cursor: pointer;
+}
+
+
+.allpayments table,.allcompany table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 25px;
+}
+.allpayments table td,.allpayments table th,.allcompany table td ,.allcompany table th{
+    
+    padding: 10px;
+    border: 1px solid #eee;
+}
+.allpayments table td span,.allcompany table td span{
+    color: teal;
+    font-size: 20px;
+}
+.allcompany table td input{
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+/*payments */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*index*/
+.maincontent .bottomcontainer{
+    display: flex;
+    margin-left: 300px;
+}
+
+.maincontent .container1{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.maincontent .container1 .row1{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.maincontent .container1 .row1 .first{
+    display: flex;
+    flex-direction: column;
+    background: #aaa;
+    padding: 10px;
+}
+.maincontent .container1 .row1 .first .barprogress{
+    margin-top: 20px;
+    width: 90%;
+    height: 15px;
+    border: 1px solid #fff;
+}
+.maincontent .container1 .row1 .first .barprogress .fill{
+    background-color: var(--c);
+    width:var(--p);
+    height: 100%;
+}
+.maincontent .container1 .row1 .first .top{
+    display: flex;
+    gap: 10px;
+   
+}
+.maincontent .container1 .row1 .first .top img{
+    width: 30px;
+}
+
+
+
+
+
+.maincontent h1{
+    color: #090;
+}
+
+.maincontent .container1 .row3{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.maincontent .container1 .row3 table{
+    border-collapse: collapse;
+}
+.maincontent .container1 .row3 table img{
+    width: 100px;
+}
+.maincontent .container1 .row3 .lastsales,.maincontent .container1 .row3 .latestusers{
+    background: #aaa;
+    padding: 20px;
+}
+
+.maincontent .container1 .row3 .lastsales h1,.maincontent .container1 .row3 .latestusers h1{
+    text-align: center;
+}
+.maincontent .container1 .row3 table td:nth-child(1) img{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.maincontent .container1 .row3 table tr td,.maincontent .container1 .row3  table thead th{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(37, 11, 184);
+}
+
+
+.maincontent .container1 .row3 table tr td span{
+    display: block;
+    margin-bottom: 5px;
+}
+.maincontent .container1 .row3 table tr td input{
+    padding: 10px;
+    border: none;
+    font-size: 25px;
+    border-radius: 9px;
+    cursor: pointer;
+    background: linear-gradient(60deg,rgb(207, 170, 4),rgba(231, 34, 8, 0.973));
+}
+
+.maincontent .container2{
+    display: flex;
+    width: 82%;
+    background:#aaa;
+    flex-direction: column;
+    padding: 25px;
+}
+.maincontent .container2 table{
+    border-collapse: collapse;
+}
+.maincontent .container2 table tr td,.maincontent .container2  table thead th{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(37, 11, 184);
+}
+.maincontent .container2  table thead th{
+    background: rgb(6, 9, 197);
+    color: #fff;
+}
+
+.maincontent .container2 table td:nth-child(1) img{
+    width: 30px;
+    border-radius: 50%;
+}
+.maincontent .container2 table td input{
+    padding: 9px;
+    border: none;
+    background-color: rgb(206, 20, 7);
+    border-radius: 9px;
+    cursor: pointer;
+}
+.maincontent .container2 table tr:hover{
+    color: #fff;
+    background: rgb(6, 9, 197);
+}
+
+/*index*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*for company only*/
+.allcompany .verytop{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.allcompany .verytop input[type="checkbox"]{
+    display:none;
+}
+.allcompany .verytop input[type="checkbox"]:checked ~ .addform{
+    display: flex;
+}
+
+.allcompany .verytop #top{
+    background-color: rgb(14, 14, 252);
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+}
+/*for company only*/
+
+/* add form */
+
+
+
+
+.addform{
+    background-color: #444;
+    width: 60vw;
+    height: 90vh;
+    position: absolute;
+    top: 10px;
+    left:20%;
+    display: none;
+    flex-direction: column;
+    box-shadow: 10px 10px 60px #fff;
+    border-radius: 14px;
+}
+
+.addform h1{
+    padding: 30px 30px 10px 30px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+    color: #eee;
+}
+.addform h2{
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+.addform form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+.addform form .container{
+    margin: 10px 0 20px 100px;
+    width: 100%;
+}
+.addform form input :focus-within{
+    background-color: transparent;
+}
+.addform form input :focus{
+    background-color: transparent;
+}
+.addform form input::-webkit-file-upload-button{
+    margin-right: 200px; 
+    background-color: transparent;
+    color: #eee;
+    border: none;
+
+}
+.addform form input[type="file"]{
+    transform: translateX(-10px);
+}
+.addform form input::-webkit-file-upload-button ::after{
+    background-color: rebeccapurple;
+}
+
+.addform form input{
+    color: #fff;
+    width: 80%;
+    padding: 10px;
+    background-color:transparent;
+    border: 1px solid #aaa;
+}
+
+.addform form input[type="file"]{
+    margin: 10px;
+}
+
+.addform form .bottom{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    align-items:center;
+    gap: 10px;
+    font-size: 20px;
+    padding-right: 30px;
+}
+.addform form .bottom input{
+    width: 90px;
+    background-color: #02f;
+    border: none;
+    font-size: 20px;
+    color:#fff;
+    cursor: pointer;
+}
+.addform form .bottom label{
+    background-color: rgb(247, 14, 14);
+    padding: 10px;
+    color:#fff;
+    cursor: pointer;
+}
+/* add form */
+

@@ -1,0 +1,430 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --bg:#5555;
+}
+
+body{
+    background: rgb(2, 30, 32);
+}
+
+a{
+    text-decoration: none;
+    font-size: 25px;
+}
+.all{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-areas: "sidebar maincontent";
+}
+
+.all .sidebar h1{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.all .sidebar{
+    grid-area: sidebar;
+    background:rgb(5, 22, 78) ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: fixed;
+    padding: 20px;
+    height: 100vh  ;
+    width: 266px;
+}
+.all .sidebar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.all .sidebar ul  li{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+.all .sidebar ul  li img{
+    width: 40px;
+}
+.all .sidebar ul  li a span{
+    color: #fff;
+}
+.all .maincontent{
+    grid-area: maincontent;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    gap: 2rem;
+}
+.all .maincontent .navbar{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(177, 141, 24);
+    width: calc(100% - 266px);
+    padding: 15px;
+    position: fixed;
+    z-index: 12000;
+}
+.all .maincontent .navbar img{
+    border-radius: 50%;
+    width: 35px;
+}
+.all .maincontent .navbar .profile .dropusershow{
+    display:none;
+
+}
+.all .maincontent .navbar .profile .dropuserhide{
+    display: flex;
+    background-color: #aaa;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    width: 150px;
+    padding: 20px;
+    right: 0px;
+    text-align: center;
+    box-shadow: 0 5px 5px #000;
+    border-radius: 10px;
+}
+
+
+
+.all .maincontent .navbar .search form{
+    background-color: #fff;
+}
+.all .maincontent .navbar .search form input{
+    padding: 10px;
+    border: none;
+}
+.maincontent .container1{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.maincontent .container1 .row1{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.maincontent .container1 .row1 .first{
+    display: flex;
+    flex-direction: column;
+    background: #aaa;
+    padding: 10px;
+}
+.maincontent .container1 .row1 .first .barprogress{
+    margin-top: 20px;
+    width: 90%;
+    height: 15px;
+    border: 1px solid #fff;
+}
+.maincontent .container1 .row1 .first .barprogress .fill{
+    background-color: var(--c);
+    width:var(--p);
+    height: 100%;
+}
+.maincontent .container1 .row1 .first .top{
+    display: flex;
+    gap: 10px;
+   
+}
+.maincontent .container1 .row1 .first .top img{
+    width: 30px;
+}
+
+
+
+
+
+.maincontent h1{
+    color: #090;
+}
+
+.maincontent .container1 .row3{
+    display: flex;
+    width: 94%;
+    gap: 20px;
+}
+
+
+.maincontent .container1 .row3 table{
+    border-collapse: collapse;
+}
+.maincontent .container1 .row3 table img{
+    width: 100px;
+}
+.maincontent .container1 .row3 .lastsales,.maincontent .container1 .row3 .latestusers{
+    background: #aaa;
+    padding: 20px;
+}
+
+.maincontent .container1 .row3 .lastsales h1,.maincontent .container1 .row3 .latestusers h1{
+    text-align: center;
+}
+.maincontent .container1 .row3 table td:nth-child(1) img{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.maincontent .container1 .row3 table tr td,.maincontent .container1 .row3  table thead th{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(37, 11, 184);
+}
+
+
+.maincontent .container1 .row3 table tr td span{
+    display: block;
+    margin-bottom: 5px;
+}
+.maincontent .container1 .row3 table tr td input{
+    padding: 10px;
+    border: none;
+    font-size: 25px;
+    border-radius: 9px;
+    cursor: pointer;
+    background: linear-gradient(60deg,rgb(207, 170, 4),rgba(231, 34, 8, 0.973));
+}
+
+.maincontent .container2{
+    display: flex;
+    width: 82%;
+    background:#aaa;
+    flex-direction: column;
+    padding: 25px;
+}
+.maincontent .container2 table{
+    border-collapse: collapse;
+}
+.maincontent .container2 table tr td,.maincontent .container2  table thead th{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(37, 11, 184);
+}
+.maincontent .container2  table thead th{
+    background: rgb(6, 9, 197);
+    color: #fff;
+}
+
+.maincontent .container2 table td:nth-child(1) img{
+    width: 30px;
+    border-radius: 50%;
+}
+.maincontent .container2 table td input{
+    padding: 9px;
+    border: none;
+    background-color: rgb(206, 20, 7);
+    border-radius: 9px;
+    cursor: pointer;
+}
+.maincontent .container2 table tr:hover{
+    color: #fff;
+    background: rgb(6, 9, 197);
+}
+
+
+.ournexttrend{
+    display: flex;
+    background: rgb(73, 67, 67);
+    width: 82%;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    text-align: center;
+    flex-direction: column;
+}
+
+.ournexttrend .container{
+    position: relative;
+    top: 50px;
+    margin-bottom: 3rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ournexttrend .container .cup{
+    width: 280px;
+    height: 300px;
+    position: relative;
+    z-index: 1000;
+    background: linear-gradient(to right,#f9f9f9,#d9d9d9);
+    border-bottom-left-radius: 42%;
+    border-bottom-right-radius: 42%;
+}
+.ournexttrend .container .cup .top{
+    position:absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(to right,#ebdfdf,#d9d9d9);
+}
+.ournexttrend .container .cup .top .cirle{
+    position:absolute;
+    width: calc(100% - 20px);
+    top: 5px;
+    left: 10px;
+    height: 80%;
+    border-radius: 50%;
+    background: linear-gradient(to right,#ebdfdf,#d9d9d9);
+}
+.ournexttrend .container .cup .tea{
+    position:absolute;
+    width: calc(100% - 20px);
+    top: 15px;
+    left: 10px;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(to left,#be6060,#852d2d);
+}
+.ournexttrend .container .cup .handle{
+    position: absolute;
+    z-index: 1000;
+    height: 180px;
+    width: 160px;
+    border: 25px solid #d9d9d9;
+    top: 40px;
+    right: -70px;
+    border-left: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-radius: 50%;
+    transform: rotate(40deg);
+}
+
+.ournexttrend .container .plate{
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    background: linear-gradient(to right,#f1ecec,#e9e7e7);
+    border-radius: 50%;
+    bottom: 10px;
+    box-shadow: 0 20px 20px #000;
+}
+.ournexttrend .container .plate::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    background: linear-gradient(to left,#f5f1f1a6,#e9e7e7);
+
+}
+.ournexttrend .container .plate::after{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    right: 30px;
+    bottom: -15px;
+    border-radius: 50%;
+    background: radial-gradient(rgba(0,0,0,0.5),transparent,transparent);
+
+}
+.ournexttrend .container .cup .top .vapour{
+    display: flex;
+    z-index: 10000;
+    position: relative;
+    padding: 0 20px;
+    gap: 4px;
+}
+.ournexttrend .container .cup .top .vapour span{
+    height: 120px;
+    background: #fff;
+    position: relative;
+    min-width: 8px;
+    display: block;
+    bottom: 37px;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    filter: blur(14px);
+    animation-delay:calc(var(--i) * -0.8s);
+    opacity: 0;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(-50px) scaleX(5);
+    }
+    100%{
+        transform: translateY(-80px) scaleX(10);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.messages{
+    display: flex;
+    background: #aaa;
+    width: 82%;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    text-align: center;
+    flex-direction: column;
+}
+
+.messages .allemail{
+    display: flex;
+    flex-direction: column;
+}
+
+.maincontent .allemail table{
+    border-collapse: collapse;
+}
+.maincontent .allemail table tr td,.maincontent .allemail  table thead th{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(37, 11, 184);
+}
+.maincontent .allemail  table thead th{
+    background: rgb(6, 9, 197);
+    color: #fff;
+}
+
+.maincontent .allemail table td:nth-child(1){
+    max-width: 360px;
+    border-radius: 50%;
+}
+.maincontent .allemail table td input{
+    padding: 9px;
+    border: none;
+    background-color: rgb(206, 20, 7);
+    border-radius: 9px;
+    cursor: pointer;
+}
