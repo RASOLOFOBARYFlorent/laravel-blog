@@ -32,7 +32,9 @@ Nous avons une gamme de produits soigneusement sélectionnés pour répondre à 
 
 Pour toute question ou demande d'information, n'hésitez pas à nous contacter
 --------------------------------------------
-+261 34 44 564 94  rasolofobaryflorent@gmail.com
++261 34 44 564 94 
+--------------------------------------------
+rasolofobaryflorent@gmail.com
 --------------------------------------------
 ---
 
